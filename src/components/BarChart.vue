@@ -1,6 +1,6 @@
 <template>
   <div>
-    <canvas id="myChart" width="400" height="400"></canvas>
+    <canvas id="barChart" width="200" height="200"></canvas>
   </div>
 </template>
 
@@ -8,9 +8,9 @@
 import Chart from "chart.js";
 export default {
   mounted() {
-    const ctx = document.getElementById("myChart");
+    const ctx = document.getElementById("barChart");
     /* eslint-disable */
-    const myChart = new Chart(ctx, {
+    const barChart = new Chart(ctx, {
       type: "bar",
       data: {
         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
