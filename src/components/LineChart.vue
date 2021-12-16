@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import Chart from "chart.js";
 export default {
   data() {
     return {
@@ -24,9 +23,9 @@ export default {
   },
   mounted() {
     // const ctx = document.getElementById("lineChart"); //vue '$refs'활용하여 대체 가능
-    const ctx = this.$refs.lineChart;
+    const ctx = this.$refs.lineChart.getContext('2d');
     /* eslint-disable */
-    const lineChart = new Chart(ctx, {
+    const lineChart = new this.$_chart(ctx, {
       type: "line",
       data: this.lineChartData,
       options: {},
