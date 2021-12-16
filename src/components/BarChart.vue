@@ -5,13 +5,12 @@
 </template>
 
 <script>
-import Chart from "chart.js";
 export default {
   mounted() {
     // const ctx = document.getElementById("barChart");
     const ctx = this.$refs.barChart;
     /* eslint-disable */
-    const barChart = new Chart(ctx, {
+    const barChart = new this.$_chart(ctx, {
       type: "bar",
       data: {
         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
