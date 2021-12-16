@@ -1,6 +1,6 @@
 <template>
   <div>
-    <canvas id="lineChart" width="200" height="200"></canvas>
+    <canvas ref="lineChart" width="200" height="200"></canvas>
   </div>
 </template>
 
@@ -23,7 +23,8 @@ export default {
     };
   },
   mounted() {
-    const ctx = document.getElementById("lineChart");
+    // const ctx = document.getElementById("lineChart"); //vue '$refs'활용하여 대체 가능
+    const ctx = this.$refs.lineChart;
     /* eslint-disable */
     const lineChart = new Chart(ctx, {
       type: "line",
